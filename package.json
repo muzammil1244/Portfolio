@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "host": "vite --host",
-    "start": "node server.js"
+     "start": "node src/backend/server.js"
 
   },
   "dependencies": {
