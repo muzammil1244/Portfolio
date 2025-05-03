@@ -6,9 +6,10 @@ export default defineConfig({
   plugins: [
     react()
     , tailwindcss(),],
-  server: {
+ 
     server: {
       host: true
-    }
-  }
+    },
+  
+  base: './'
   })
