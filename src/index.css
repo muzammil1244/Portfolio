@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Text animations */
+  .texts {
+    opacity: 0;
+    transform: translateY(50px); /* Coming from below */
+    transition: opacity 1s ease-out, transform 0.7s ease-out;
+  }
+
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text2 {
+    opacity: 0;
+    transform: translateX(50px); /* Coming from right */
+    transition: opacity 1s ease-out, transform 0.7s ease-out;
+  }
+
+  .show2 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .text2r {
+    opacity: 0;
+    transform: translateX(-80px); /* Coming from left */
+    transition: opacity 1.5s ease-out, transform 0.7s ease-out;
+  }
+
+  .show2r {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Logos */
+  .logo {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+  }
+  
+  .logo.show22 {
+    opacity: 1;
+    transform: translateX(0);
+    
+    filter: blur(0px);
+    
+  }
+
+  
+  
+  .logo:nth-child(1) { transition-delay: 0.1s; }
+.logo:nth-child(2) { transition-delay: 0.3s; }
+.logo:nth-child(3) { transition-delay: 0.5s; }
+.logo:nth-child(4) { transition-delay: 0.7s; }
+
+
+.scaleeffect{
+
+  transition: all 0.7s;
+  transform: scale(1);
+
+}
+.scaleeffect:hover{
+
+  transition: all 0.7s;
+  transform: scale(1.2);
+
+}
+
+  
+}
+
+body {
+  overflow-x: hidden;
+}
+

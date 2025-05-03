@@ -1,0 +1,55 @@
+(
+        <div className="flex relative  items-center top-0 justify-center mt-10">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white p-8 rounded-lg shadow-md w-96 flex flex-col gap-4"
+          >
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="border p-2 rounded-md"
+            />
+
+            <input
+              type="text"
+              placeholder="Enter heading"
+              value={heading}
+              onChange={(e) => setHeading(e.target.value)}
+              className="border p-2 rounded-md"
+            />
+
+            <textarea
+              placeholder="Enter paragraph (max 150 characters)"
+              value={paragraph}
+              onChange={(e) =>
+                e.target.value.length <= 150 && setParagraph(e.target.value)
+              }
+              className="border p-2 rounded-md resize-none"
+              rows="3"
+            />
+
+            <p className="text-right text-sm text-gray-500">{paragraph.length}/150</p>
+
+            <button
+              type="submit"
+              className="bg-green-500 text-white p-2 rounded-md hover:bg-green-600"
+            >
+              Submit
+            </button>
+
+            {/* Preview */}
+            {image && (
+              <div className="mt-4 text-center">
+                <img
+                  src={image}
+                  alt="Preview"
+                  className="h-40 w-full object-cover rounded-md mb-2"
+                />
+                <h2 className="text-xl font-bold">{heading}</h2>
+                <p>{paragraph}</p>
+              </div>
+            )}
+          </form>
+        </div>
+      )
