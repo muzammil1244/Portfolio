@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Element } from "react-scroll";
-import img1 from "../imgs/Now! (2).png"
+import img1 from "../imgs/Copy of Now!.png"
 import img2 from "../imgs/collection.png"
 import img3 from "../imgs/Now! (1).png"
 
