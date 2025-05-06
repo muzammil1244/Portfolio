@@ -1,4 +1,8 @@
 import { Element } from "react-scroll"
+import img1 from "../imgs/Screenshot (86).png"
+import img2 from "../imgs/Screenshot (88).png"
+
+import img3 from "../imgs/Your paragraph text (3).png"
 
 export const FPage = () => {
     return (
@@ -9,17 +13,17 @@ export const FPage = () => {
 
  <div className=" mt-10 justify-self-center grid grid-cols-1 gap-10 md:flex md:justify-around md:mt-30 md:h-full">
     <div className="logo scaleeffect rounded-2xl overflow-hidden w-80 h-60 duration-500 md:w-2/7 md:h-64">
-        <img className=" md:w-full md:h-full" src="src\imgs\Screenshot (86).png" alt="" />
+        <img className=" md:w-full md:h-full" src={img1} alt="" />
                 </div>
                
 
                 <div className="logo scaleeffect rounded-2xl overflow-hidden w-80 h-60 duration-500 md:w-2/7 md:h-64">
-                <img className="md:w-full md:h-full overflow-hidden h-full" src="src\imgs\Screenshot (88).png" alt="" />
+                <img className="md:w-full md:h-full overflow-hidden h-full" src={img2} alt="" />
 
                 </div>
 
               <div className=" logo scaleeffect rounded-2xl overflow-hidden w-80 h-60 duration-500 md:w-2/7 md:h-64">
-      <img className="md:w-full md:h-full " src="src\imgs\Your paragraph text (3).png" alt="" />
+      <img className="md:w-full md:h-full " src={img3} alt="" />
                 </div>  
 
                 
