@@ -50,7 +50,7 @@ const Header = () => {
           </li>
           <li className="px-2">
             <Link to="Contect" smooth={true} duration={700}>
-              Contect
+              Contact
             </Link>
           </li>
         </ul>

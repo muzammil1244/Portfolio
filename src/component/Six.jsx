@@ -8,10 +8,10 @@ export const Six = () => {
   const [showMsg, setMsg] = useState("");
 
   const Submited = (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
-    console.log(showEmail, showMsg, showName);  // Display form data
+    e.preventDefault(); 
+    console.log(showEmail, showMsg, showName);  
     
-    // Add your emailjs logic here
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -49,7 +49,7 @@ export const Six = () => {
 
       <form
         className="bg-transparent rounded-2xl shadow-2xl p-8 w-full flex flex-col gap-5"
-        onSubmit={Submited} // Calling Submited directly
+        onSubmit={Submited} 
       >
         <div className="texts w-full flex justify-around">
           <input
@@ -64,7 +64,6 @@ export const Six = () => {
             type="email"
             placeholder="Your Email"
             onChange={(e) => setEmail(e.target.value)}
-            defaultValue="muzammil844641@gmai.com" // Ensure this is what you want
             className="p-3 w-2/4 text-blue-50 placeholder-blue-50 rounded-md border-2 border-white focus:outline-none focus:ring-2 focus:ring-green-500"
             required
           />

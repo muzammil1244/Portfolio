@@ -31,7 +31,7 @@ export const PageOne = () => {
             </h4>
             <div className="border-2 w-1/4 md:w-1/3 border-b-green-400 mb-4"></div>
             <h1 className="texts text-white text-3xl md:text-6xl pb-6 pt-6 [text-shadow:_0_0_4px_rgba(255,255,255,0.6)]">
-              mohammad muzammil
+              Mohammad Muzammil
             </h1>
             <p className="texts text-blue-200 text-sm md:text-base [text-shadow:_0_0_5px_rgba(255,255,255,0.6)]">
               A passionate BCA student and self-taught developer specializing in

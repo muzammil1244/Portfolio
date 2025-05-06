@@ -4,8 +4,8 @@ import { Element } from "react-scroll";
 import img1 from "../imgs/icons8-add-50 (1).png"
 
 export const Five = () => {
-  const [image, setImage] = useState(null); // preview ke liye
-  const [file, setFile] = useState(null);   // actual file upload ke liye
+  const [image, setImage] = useState(null);
+  const [file, setFile] = useState(null);   
   const [heading, setHeading] = useState("");
   const [paragraph, setParagraph] = useState("");
   const [showForm, setShowForm] = useState(false);
@@ -13,26 +13,25 @@ export const Five = () => {
   const [showwarn, setwarn] = useState(false);
 
   const refreshed=async()=>{
-    console.log("Fetching blogs..."); // Step 1: Confirm effect run ho raha
+    console.log("Fetching blogs..."); 
 
    await fetch("http://localhost:8000/Users")
       .then((res) => {
-        console.log("Raw response:", res); // Step 2: Response object check karo
+        console.log("Raw response:", res); 
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
         return res.json();
       })
       .then((data) => {
-        console.table("Fetched blogs data:", data); // Step 3: Final data check karo
+        console.table("Fetched blogs data:", data); 
         setBlogs(data);
       })
       .catch((err) => {
-        console.error("Fetch error:", err); // Step 4: Agar error aaye to uska reason
+        console.error("Fetch error:", err); 
       });
 
   }
-  // Fetch blogs on mount
   useEffect(() => {
 
    refreshed()
@@ -52,7 +51,7 @@ export const Five = () => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
       setFile(selectedFile);
-      setImage(URL.createObjectURL(selectedFile)); // preview
+      setImage(URL.createObjectURL(selectedFile)); 
     }
   };
 
@@ -79,9 +78,7 @@ export const Five = () => {
 
       await refreshed()
 
-      // Refresh blog list
 
-      // Reset form
       setImage(null);
       setFile(null);
       setHeading("");
@@ -95,12 +92,11 @@ export const Five = () => {
 
   return (
     <section className="w-screen min-h-screen bg-gradient-to-b from-gray-950 to-green-500 p-5 overflow-hidden">
-      {/* Header */}
       <div className="w-full flex justify-between md:justify-around items-center mb-12">
         <Element name="Blog">
           
           <h1 className="md:text-5xl text-2xl text-center font-serif bg-gradient-to-b from-green-400 to-gray-700 text-transparent bg-clip-text">
-            ADD YOUR BLOG
+            ADD BLOGS
           </h1>
        
         </Element>
@@ -114,7 +110,6 @@ export const Five = () => {
         </div>
       </div>
 
-      {/* Blogs List */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center px-4">
   {blogs.length > 0 ? (
     blogs.map((blog, index) => (
@@ -122,7 +117,6 @@ export const Five = () => {
         key={index}
         className="md:w-80 md:h-100 w-60 h-90 md:py-0  bg-gray-900 text-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
       >
-        {/* Image */}
         <img
           className="w-full h-48 object-cover"
           src={
@@ -135,7 +129,6 @@ export const Five = () => {
           alt={blog.name}
         />
 
-        {/* Content */}
         <div className=" py-5 md:p-4 flex flex-col justify-around h-52">
           <h1 className="text-xl font-semibold text-green-400 text-center truncate">{blog.name}</h1>
           <p className="text-sm text-gray-300 text-center leading-tight break-words">{blog.paragraph}</p>
@@ -147,7 +140,6 @@ export const Five = () => {
   )}
 </div>
 
-      {/* Form Section */}
      
       {showForm && (
           <div className="max-w-md mx-auto mt-20 p-6 bg-red-50 border border-red-500 rounded-xl shadow-lg text-center">
@@ -218,7 +210,6 @@ Cancel
                                       className="bg-green-500 text-white p-2 rounded-md hover:bg-green-600"
                   >Cancel</button>
       
-                  {/* Preview */}
                   {image && (
                     <div className="mt-4 text-center">
                       <img

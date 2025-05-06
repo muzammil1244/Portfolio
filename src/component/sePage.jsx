@@ -50,13 +50,13 @@ export const SePage = () => {
 
           <div className="text-blue-200 relative md:w-1/3 md:bottom-60 md:left-45 md:text-end md:h-400">
             <h3 className="texts text-2xl text-green-400 mb-2">Project</h3>
-            <a href="" className="text2r text-blue-200 text-2xl mb-3">
-              Wheather Application
+            <a href="" className="text2r text-blue-200 text-2xl mb-3 border-solid border-b-1">
+              Weather Application
             </a>
             <p className="text2 w-80 md:w-full  text-indigo-100">
             Weather App is a React Native application that shows real-time weather information for any location. It includes current weather updates, hourly forecasts, and an interactive UI with animations. The app uses an open-source weather API to fetch data. Built with React Native CLI, it offers a smooth and responsive experience.          </p>
 
-            <a className="text-green-400 underline" href="https://github.com/muzammil1244/weather_App">clickhere</a>
+            <a className="text-green-400 underline" href="https://github.com/muzammil1244/weather_App">Click Here</a>
           </div>
         </div>
       </Element>

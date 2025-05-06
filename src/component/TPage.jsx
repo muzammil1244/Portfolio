@@ -30,7 +30,6 @@ import img10 from "../imgs/redux-icon.png"
         })
     })
 
-    /*logos <scroll>*/
 
     const observerss = new IntersectionObserver((entry)=>{
         entry.forEach((e)=>{
