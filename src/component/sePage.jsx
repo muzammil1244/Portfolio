@@ -62,7 +62,7 @@ export const SePage = () => {
       </Element>
 
       <div className="w-full  md:mt-0 ml-7  h-screen md:ml-100">
-        <img className="text2r w-75 h-50  md:w-130 md:h-1/2"  src={img2} alt="" />
+        <img className="text2 w-75 h-50  md:w-130 md:h-1/2"  src={img2} alt="" />
 
         <div className="text-blue-200 relative md:w-1/3 md:bottom-60 md:right-23 md:text-start md:h-400">
           <h3 className="texts text-2xl text-green-400 mb-2">Project</h3>
