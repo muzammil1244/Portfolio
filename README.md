@@ -24,8 +24,8 @@ This is my personal portfolio website built using the **MERN stack** to showcase
 ---
 ![Screenshot (92)](https://github.com/user-attachments/assets/511fe0fc-c6b3-46fb-9f11-2e010e992e1d)
 
-run code with : npm reun dev
+run code with : npm run dev
 
 ```bash
 git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
+
