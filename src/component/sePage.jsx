@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 import { Element } from "react-scroll";
+import img1 from "../imgs/Now! (2).png"
+import img2 from "../imgs/collection.png"
+import img3 from "../imgs/Now! (1).png"
+
 
 export const SePage = () => {
   useEffect(() => {
@@ -42,7 +46,7 @@ export const SePage = () => {
 
       <Element name="Projects">
         <div className="w-full h-screen mt-20 ml-7 md:mt-30 md:ml-45">
-          <img className="text2r w-75 h-50  md:w-130 md:h-1/2" src="src\imgs\Now! (2).png" alt="" />
+          <img className="text2r w-75 h-50  md:w-130 md:h-1/2" src={img1} alt="" />
 
           <div className="text-blue-200 relative md:w-1/3 md:bottom-60 md:left-45 md:text-end md:h-400">
             <h3 className="texts text-2xl text-green-400 mb-2">Project</h3>
@@ -58,7 +62,7 @@ export const SePage = () => {
       </Element>
 
       <div className="w-full  md:mt-0 ml-7  h-screen md:ml-100">
-        <img className="text2r w-75 h-50  md:w-130 md:h-1/2"  src="src\imgs\collection.png" alt="" />
+        <img className="text2r w-75 h-50  md:w-130 md:h-1/2"  src={img2} alt="" />
 
         <div className="text-blue-200 relative md:w-1/3 md:bottom-60 md:right-23 md:text-start md:h-400">
           <h3 className="texts text-2xl text-green-400 mb-2">Project</h3>
@@ -73,7 +77,7 @@ export const SePage = () => {
       </div>
 
       <div className="w-full h-screen ml-7 md:ml-45">
-        <img className="text2r w-75 h-50  md:w-130 md:h-1/2" src="src\imgs\Now! (1).png" alt="" />
+        <img className="text2r w-75 h-50  md:w-130 md:h-1/2" src={img3} alt="" />
         <div className="text-blue-200 relative md:w-1/3 md:bottom-60 md:left-45 md:text-end md:h-400">
           <h3 className="texts text-2xl text-green-400 mb-2">Project</h3>
           <a href="https://www.linkedin.com/posts/muzammil1244_reactnative-ecommerce-mobileappdevelopment-activity-7280887211334520832-7F0X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjwJckBHzSIvtlRB79cufGWu32yKq7E1DE" className="text2 text-blue-200 text-2xl mb-3">

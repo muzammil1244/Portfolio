@@ -18,7 +18,6 @@ const USEr = new mongoose.Schema({
       default: Date.now,
     },
   });
-  
   // Create the model
    export const DATA = mongoose.model('Content', USEr);
   

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Header from "./header";
-
+import whitefox from "../imgs/whitefox.jpg"
 export const PageOne = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entry) => {
@@ -45,7 +45,7 @@ export const PageOne = () => {
           <div  className=" texts flex justify-center items-center w-full h-full mt-10 md:mt-10">
             <img
               className=" mb-20 md:w-90 md:h-90 h-50 w-50 md:mb-10  object-cover rounded-lg shadow-md"
-              src="src\imgs\whitefox.jpg"
+              src={whitefox}
               alt="profile"
             />
           </div>

@@ -11,6 +11,8 @@ const upload = multer({ storage: storage });
 // Route for posting data with image
 router.post("/postDATA", upload.single("image"), async (req, res) => {
     console.log("Route hit!");
+    console.log("Received file:", req.file); // 👈 yeh file info print karega
+    console.log("Received body:", req.body);
 
     const { name, paragraph } = req.body;
     const file = req.file;
