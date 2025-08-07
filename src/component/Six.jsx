@@ -2,92 +2,127 @@ import { useState } from "react";
 import { Element } from "react-scroll";
 import emailjs from "@emailjs/browser";
 
+import { GrMail, GrMap } from "react-icons/gr";
+import { FcCallback } from "react-icons/fc";
+import { IoCall } from "react-icons/io5";
+import { MdCall } from "react-icons/md";
+import { BsGithub, BsInstagram } from "react-icons/bs";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { GiMailbox } from "react-icons/gi";
+import { CgMail } from "react-icons/cg";
+import { CiCircleAlert } from "react-icons/ci";
+
 export const Six = () => {
   const [showName, setName] = useState("");
   const [showEmail, setEmail] = useState("");
   const [showMsg, setMsg] = useState("");
 
   const Submited = (e) => {
-    e.preventDefault(); 
-    console.log(showEmail, showMsg, showName);  
-    
+    e.preventDefault();
+    console.log(showEmail, showMsg, showName);
 
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,        {
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
           name: showName,
           message: showMsg,
           to_email: showEmail,
         },
-       
-        import.meta.env. VITE_APP_EMAILJS_PUBLIC_KEY,
- )
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
       .then(() => {
         alert("Message sent successfully!");
-        setName('');
-        setEmail('');
-        setMsg('');
+        setName("");
+        setEmail("");
+        setMsg("");
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
       });
   };
 
   return (
-    <section className="w-full min-h-screen bg-gray-950 flex flex-col items-center justify-center p-8">
-      <Element name="Contect">
-        <h2 className="texts text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-          Get In Touch
-        </h2>
-      </Element>
-
-      <p className="logo text-white text-lg md:text-xl mb-8 text-center max-w-xl">
-        Feel free to reach out for collaborations or just a friendly hello!  
-        I am always open to discussing new projects or creative ideas.
-      </p>
-
-      <form
-        className="bg-transparent rounded-2xl shadow-2xl p-8 w-full flex flex-col gap-5"
-        onSubmit={Submited} 
-      >
-        <div className="texts w-full flex justify-around">
-          <input
-            type="text"
-            placeholder="Your Name"
-            onChange={(e) => setName(e.target.value)}
-            className="p-3 w-2/4 placeholder-blue-50 text-blue-50 rounded-md border-2 border-white focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-
-          <input
-            type="email"
-            placeholder="Your Email"
-            onChange={(e) => setEmail(e.target.value)}
-            className="p-3 w-2/4 text-blue-50 placeholder-blue-50 rounded-md border-2 border-white focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
+    <section className="w-full min-h-screen dark:bg-bg-dark bg-white flex justify-center items-start py-20 px-4">
+      <Element name="Contact" />
+      <div className="max-w-4xl w-full h-fit">
+        {/* Heading */}
+        <div className="mb-12">
+          <h1 className="text-gray-500 text-sm font-bold uppercase">Contact</h1>
+          <p className="text-green-400 font-bold text-lg">Let’s connect 🤝 and create</p>
         </div>
 
-        <textarea
-          placeholder="Your Message"
-          onChange={(e) => setMsg(e.target.value)}
-          rows="5"
-          className="texts p-3 rounded-md border-2 text-blue-50 placeholder-blue-50 border-white resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
-          required
-        ></textarea>
+        {/* Contact Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full">
+          {/* Email */}
+          <a
+            href="mailto:muzammil844641@gmail.com"
+            className="flex px-4 py-4 shadow-sm dark:hover:bg-border-color hover:bg-blue-50 items-center gap-4 dark:text-text-color rounded-lg dark:bg-card-color bg-white w-full"
+          >
+            <GrMail className="size-5" />
+            <div className="flex flex-col text-sm">
+              <p className="font-bold">Email</p>
+              <p>muzammil844641@gmail.com</p>
+            </div>
+          </a>
 
-        <button
-          type="submit"
-          className="texts bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 font-semibold"
-        >
-          Send Message
-        </button>
-      </form>
+          {/* Location */}
+          <a
+            href="https://www.google.com/maps/place/Chhatrapati+Sambhajinagar,+Maharashtra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex px-4 py-4 dark:hover:bg-border-color shadow-sm hover:bg-blue-50 items-center dark:text-text-color gap-4 rounded-lg dark:bg-card-color bg-white w-full"
+          >
+            <GrMap className="size-5" />
+            <div className="flex flex-col text-sm">
+              <p className="font-bold">Location</p>
+              <p>India, Maharashtra, Aurangabad</p>
+            </div>
+          </a>
 
-      <p className="texts text-white text-sm mt-8">
-        © {new Date().getFullYear()} Mr Muzammil. All rights reserved.
-      </p>
+          {/* Phone Number */}
+          <p className="flex px-4 py-4 shadow-sm dark:hover:bg-border-color dark:text-text-color hover:bg-blue-50 items-center gap-4 rounded-lg dark:bg-card-color bg-white w-full">
+            <MdCall className="size-5" />
+            <div className="flex flex-col text-sm">
+              <p className="font-bold">Number</p>
+              <p>+91 8446411038</p>
+            </div>
+          </p>
+
+          {/* Availability */}
+          <p className="flex px-4 py-4 shadow-sm dark:hover:bg-border-color dark:text-text-color hover:bg-green-50 items-center gap-4 rounded-lg dark:bg-card-color bg-white w-full">
+            <CiCircleAlert className="size-5 text-green-700 animate-pulse" />
+            <div className="flex flex-col text-sm">
+              <p className="font-bold">Available for work</p>
+              <p>Open to new opportunities and freelance projects</p>
+            </div>
+          </p>
+        </div>
+
+        {/* Social Links */}
+        <div className="w-full h-fit mt-10 flex-col flex gap-6">
+          <h1 className="text-lg dark:text-secondary-text-color">Follow Me here</h1>
+          <div className="flex flex-wrap gap-6">
+            <a href="https://github.com/muzammil1244" className="hover:scale-110 transition-transform duration-150 dark:text-text-color text-xl">
+              <BsGithub />
+            </a>
+            <a href="" className="hover:scale-110 transition-transform duration-150 dark:text-text-color text-xl">
+              <BsInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/muzammil1244" className="hover:scale-110 transition-transform duration-150 dark:text-text-color text-xl">
+              <FaLinkedin />
+            </a>
+            <a href="https://x.com/MohammadMu47824" className="hover:scale-110 transition-transform duration-150 dark:text-text-color text-xl">
+              <FaTwitter />
+            </a>
+            <a href="mailto:muzammil844641@gmail.com" className="hover:scale-110 transition-transform duration-150 dark:text-text-color text-xl">
+              <CgMail />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

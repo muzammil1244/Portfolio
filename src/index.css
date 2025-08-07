@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
 @layer utilities {
   /* Text animations */
   .texts {
@@ -79,3 +84,55 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+/* src/index.css ya App.css me */
+.active-link {
+  @apply text-blue-700 dark:text-white;
+}
+
+@-webkit-keyframes typing { 
+  from { width: 0; } 
+  to { width: 21ch; }
+}
+@-webkit-keyframes blink-caret { 
+  50% { border-color: transparent; } 
+}
+
+.texteff { 
+  font: monospace;
+  width: 21ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  -webkit-animation: typing 2s steps(21, end) 0s infinite alternate,
+                     blink-caret .5s step-end infinite alternate;
+  animation: typing 2s steps(21, end) 0s infinite alternate,
+             blink-caret .5s step-end infinite alternate;
+  /* 2s typing, 1s pause, repeat every 3s */
+  -webkit-animation-duration: 2s, .5s;
+  -webkit-animation-delay: 0s, 0s;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-direction: alternate, alternate;
+  animation-duration: 2s, .5s;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate, alternate;
+}
+@theme{
+
+--color-bg-dark: #121212;
+  --color-card-color: #1E1E1E;
+  --color-text-color: #E0E0E0;
+  --color-secondary-text-color: #B0B0B0;
+  --color-accent-color: #00BCD4;
+  --color-accent-light: #4DD0E1;
+  --color-border-color: #2E2E2E;
+  --color-hover-color: #2A2A2A;
+  --color-error-color: #EF5350;
+  --color-success-color: #66BB6A;
+    --color-shadow-color: rgba(0, 0, 0, 0.5);
+
+
+}

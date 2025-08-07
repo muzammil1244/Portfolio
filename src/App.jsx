@@ -14,16 +14,13 @@ function App() {
 
   return (
     <>
-      <div className="    scrollbar-hide">  
+      <div className=" overflow-x-hidden">  
        
       <PageOne/>
 
       
-     <SePage/>
-     <TPaeg/>
-     <FPage/>
-     <Five/>
-     <Six/>
+ 
+     
       </div>
     </>
   )
