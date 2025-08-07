@@ -70,7 +70,7 @@ console.log("dark theme ",gettheme)
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h4  className=" texteff text-black text-2 dark:text-text-color md:text-3xl mb-2 ">
+          <h4  className=" texteff text-black text-4xl  dark:text-text-color md:text-3xl mb-2 ">
             <span className="text-green-600">M</span> <span className="text-yellow-300">E</span> <span className=" text-blue-400"> R</span> <span className="text-green-700">N</span>  STACK <br/>
             Developer
           </h4>

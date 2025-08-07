@@ -44,8 +44,8 @@ export const SePage = () => {
       {/* Projects Section */}
        <Element name="Projects" className="pt-24 scroll-mt-24">
       <div className="w-full flex flex-col items-center">
-        <h1 className="text-gray-600 text-3xl dark:text-text-color font-mono mb-12 text-center">
-          The <span className="text-green-400 ">Project</span>  with Problem Solving Concept
+        <h1 className="text-gray-600 text-3xl dark:text-text-color mb-12 text-center">
+          Projects  
         </h1>
 
         {/* Project 1 */}

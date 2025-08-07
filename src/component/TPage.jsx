@@ -15,7 +15,7 @@ import s4 from "../imgs/vs code .png"
 import img9 from "../imgs/postman-icon.png";
 import img10 from "../imgs/redux-icon.png";
 
-import { BiBriefcase, BiCalendar, BiCalendarCheck } from "react-icons/bi";
+import { BiBriefcase, BiCalendar, BiCalendarCheck, BiLinkAlt } from "react-icons/bi";
 import { MdDeveloperMode, MdSubject } from "react-icons/md";
 import { SiEducative, SiHyperskill } from "react-icons/si";
 import { FaBriefcase, FaCode, FaGraduationCap, FaTools } from "react-icons/fa";
@@ -56,7 +56,7 @@ export const TPaeg = () => {
   return (
     <section dat-theme='dark' className="w-screen mb-10 md:mb-0 h-fit flex flex-col justify-around items-center dark:bg-bg-dark  bg-white  ">
       <Element name="Skills">
-        <h1 className=" w-full pt-10 md:text-4xl text-xl  dark:text-text-color text-gray-800 justify-center  flex items-center gap-4 mb-8"><FaCode className="text-green-400 animate-pulse size-5 md:size-10"/> Skill Summary for <span className="text-gray-500">Portfolio</span> </h1>
+        <h1 className=" w-full pt-10 md:text-4xl text-xl  dark:text-text-color text-gray-800 justify-center  flex items-center gap-4 mb-8"><FaCode className="text-green-400 animate-pulse size-5 md:size-10"/> Skill   <span className="text-gray-500">Summary</span> </h1>
     
 
       
@@ -213,7 +213,7 @@ I use Tailwind for responsive UI, JavaScript for interactivity, and Redux to man
               Bachelor of Computer Applications (BCA)
               <span className="bg-green-400 text-white text-xs px-2 py-1 rounded-md">Current</span>
             </h1>
-            <h2 className="text-base md:text-lg font-serif dark:text-text-color">Maulana Azad College</h2>
+            <a href="https://maca.ac.in/"  className="text-base flex items-center  md:text-lg font-serif dark:text-text-color"> <span className=" border-b dark:border-secondary-text-color ">M</span>aulana Azad College <BiLinkAlt className="md:size-5 size-2 "/></a>
           </div>
 
           {/* Right Info */}

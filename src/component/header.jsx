@@ -43,7 +43,7 @@ const Header = () => {
     <header className={`w-full fixed top-0 left-0 z-50 ${isScrolled ? "bg-white/70 dark:bg-bg-dark shadow-md" : "bg-white dark:bg-bg-dark"} transition-all duration-300`}>
       <nav className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold dark:text-text-color text-blue-900">Muzammil.Dev</h1>
+        <h1 className="md:text-xl md:font-bold text-lg dark:text-text-color text-blue-900">Muzammil.Dev</h1>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-6 text-sm font-bold text-blue-950 dark:text-secondary-text-color">
@@ -63,7 +63,7 @@ const Header = () => {
             className="text-xl text-blue-800 dark:text-white hover:text-yellow-400 transition"
             title="Toggle theme"
           >
-            {theme === "light" ? <FaMoon /> : <FaSun />}
+            {theme === "light" ? <FaMoon className="size-3 md:size-4" /> : <FaSun className="size-3 md:size-4" />}
           </button>
         </div>
 
@@ -73,7 +73,7 @@ const Header = () => {
             className="text-2xl text-blue-800 dark:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimes className="size-4 md:size-4" /> : <FaBars className="size-4 md:size-4" />}
           </button>
         </div>
       </nav>
@@ -101,9 +101,9 @@ const Header = () => {
                 className="text-lg text-blue-800 dark:text-white hover:text-yellow-400 transition"
               >
                 {theme === "light" ? (
-                  <div className="flex items-center gap-2"><FaMoon /> Dark Mode</div>
+                  <div className="flex items-center text-sm gap-2"><FaMoon className="size-3 md:size-4 text-sm " /> Dark Mode</div>
                 ) : (
-                  <div className="flex items-center gap-2"><FaSun /> Light Mode</div>
+                  <div className="flex items-center text-sm gap-2"><FaSun className="size-3 md:size-4 text-sm " /> Light Mode</div>
                 )}
               </button>
             </li>
