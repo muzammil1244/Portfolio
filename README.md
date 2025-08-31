@@ -5,8 +5,7 @@ This is my personal portfolio website built using the **MERN stack** to showcase
 ## 🚀 Tech Stack Used
 
 - **Frontend**: React + Vite + Tailwind CSS  
-- **Backend**: Node.js + Express.js  
-- **Database**: MongoDB (Cloud or Local)
+
 
 ---
 
@@ -15,8 +14,6 @@ This is my personal portfolio website built using the **MERN stack** to showcase
 - Clean and modern UI with smooth transitions
 - Fully responsive design (Mobile + Desktop)
 - Projects section with detailed cards
-- Contact form with backend API integration
-- Data stored and retrieved using MongoDB
 - Organized code with reusable components
 
 ---
